@@ -10,6 +10,5 @@ node_modules/
 frontend/dist/
 all_reviews_cleaned.csv
 all_reviews_merged.csv
-DATA_QUALITY_CHECKLIST_filled.csv
 *.safetensors
 *.pt
