@@ -9,12 +9,16 @@ services:
       - "8000:8000"
     environment:
       - PYTHONUNBUFFERED=1
+    env_file:
+      - .env
+    volumes:
+      - ./artifacts/chroma:/app/artifacts/chroma
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-      interval: 15s
+      interval: 30s
       timeout: 10s
-      retries: 10
-      start_period: 60s
+      retries: 5
+      start_period: 120s
 
   frontend:
     build:
