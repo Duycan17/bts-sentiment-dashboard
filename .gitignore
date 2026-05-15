@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+artifacts/chroma/
+artifacts/recommendations/
+artifacts/sentiment_transformer/
+node_modules/
+frontend/dist/
+all_reviews_cleaned.csv
+all_reviews_merged.csv
+DATA_QUALITY_CHECKLIST_filled.csv
+*.safetensors
+*.pt

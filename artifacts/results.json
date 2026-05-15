@@ -1,0 +1,261 @@
+{
+  "data": {
+    "rows_total": 1000,
+    "rows_train": 600,
+    "rows_val": 200,
+    "rows_test": 200,
+    "aspect_col_used": "aspect_pred"
+  },
+  "baseline_tfidf_logreg": {
+    "variant_selected": "tfidf_logreg_classweight_balanced",
+    "thresholds": {
+      "Negative": 0.2,
+      "Neutral": 0.2,
+      "Positive": 0.45000000000000007
+    },
+    "val": {
+      "name": "baseline_val",
+      "labels": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "confusion_matrix": [
+        [
+          6,
+          6,
+          17
+        ],
+        [
+          4,
+          7,
+          15
+        ],
+        [
+          12,
+          6,
+          127
+        ]
+      ],
+      "report": {
+        "Negative": {
+          "precision": 0.2727272727272727,
+          "recall": 0.20689655172413793,
+          "f1-score": 0.23529411764705882,
+          "support": 29.0
+        },
+        "Neutral": {
+          "precision": 0.3684210526315789,
+          "recall": 0.2692307692307692,
+          "f1-score": 0.3111111111111111,
+          "support": 26.0
+        },
+        "Positive": {
+          "precision": 0.7987421383647799,
+          "recall": 0.8758620689655172,
+          "f1-score": 0.8355263157894737,
+          "support": 145.0
+        },
+        "accuracy": 0.7,
+        "macro avg": {
+          "precision": 0.4799634879078772,
+          "recall": 0.45066312997347485,
+          "f1-score": 0.4606438481825479,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 0.6665282417020254,
+          "recall": 0.7,
+          "f1-score": 0.6803186704506363,
+          "support": 200.0
+        }
+      }
+    },
+    "test": {
+      "name": "baseline_test",
+      "labels": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "confusion_matrix": [
+        [
+          3,
+          7,
+          11
+        ],
+        [
+          2,
+          5,
+          14
+        ],
+        [
+          16,
+          14,
+          128
+        ]
+      ],
+      "report": {
+        "Negative": {
+          "precision": 0.14285714285714285,
+          "recall": 0.14285714285714285,
+          "f1-score": 0.14285714285714285,
+          "support": 21.0
+        },
+        "Neutral": {
+          "precision": 0.19230769230769232,
+          "recall": 0.23809523809523808,
+          "f1-score": 0.2127659574468085,
+          "support": 21.0
+        },
+        "Positive": {
+          "precision": 0.8366013071895425,
+          "recall": 0.810126582278481,
+          "f1-score": 0.8231511254019293,
+          "support": 158.0
+        },
+        "accuracy": 0.68,
+        "macro avg": {
+          "precision": 0.3905887141181259,
+          "recall": 0.39702632107695396,
+          "f1-score": 0.3929247419019602,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 0.6961073403720464,
+          "recall": 0.68,
+          "f1-score": 0.6876298145994391,
+          "support": 200.0
+        }
+      }
+    },
+    "test_by_aspect": {}
+  },
+  "transformer_sentiment": {
+    "model_dir": "/Users/dkduy/VKU/HK8/ChuyenDe4/final/artifacts/sentiment_transformer",
+    "thresholds": {
+      "Negative": 0.3500000000000001,
+      "Neutral": 0.3500000000000001,
+      "Positive": 0.25
+    },
+    "argmax_val_macro_f1": 0.5788078798754955,
+    "argmax_test_macro_f1": 0.45359893132170354,
+    "val": {
+      "name": "transformer_val",
+      "labels": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "confusion_matrix": [
+        [
+          10,
+          8,
+          11
+        ],
+        [
+          2,
+          9,
+          15
+        ],
+        [
+          9,
+          2,
+          134
+        ]
+      ],
+      "report": {
+        "Negative": {
+          "precision": 0.47619047619047616,
+          "recall": 0.3448275862068966,
+          "f1-score": 0.4,
+          "support": 29.0
+        },
+        "Neutral": {
+          "precision": 0.47368421052631576,
+          "recall": 0.34615384615384615,
+          "f1-score": 0.4,
+          "support": 26.0
+        },
+        "Positive": {
+          "precision": 0.8375,
+          "recall": 0.9241379310344827,
+          "f1-score": 0.8786885245901639,
+          "support": 145.0
+        },
+        "accuracy": 0.765,
+        "macro avg": {
+          "precision": 0.5957915622389307,
+          "recall": 0.5383731211317418,
+          "f1-score": 0.5595628415300546,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 0.7378140664160401,
+          "recall": 0.765,
+          "f1-score": 0.7470491803278688,
+          "support": 200.0
+        }
+      }
+    },
+    "test": {
+      "name": "transformer_test",
+      "labels": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "confusion_matrix": [
+        [
+          6,
+          2,
+          13
+        ],
+        [
+          4,
+          6,
+          11
+        ],
+        [
+          14,
+          7,
+          137
+        ]
+      ],
+      "report": {
+        "Negative": {
+          "precision": 0.25,
+          "recall": 0.2857142857142857,
+          "f1-score": 0.26666666666666666,
+          "support": 21.0
+        },
+        "Neutral": {
+          "precision": 0.4,
+          "recall": 0.2857142857142857,
+          "f1-score": 0.3333333333333333,
+          "support": 21.0
+        },
+        "Positive": {
+          "precision": 0.8509316770186336,
+          "recall": 0.8670886075949367,
+          "f1-score": 0.8589341692789969,
+          "support": 158.0
+        },
+        "accuracy": 0.745,
+        "macro avg": {
+          "precision": 0.5003105590062112,
+          "recall": 0.47950572634116934,
+          "f1-score": 0.4863113897596656,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 0.7404860248447206,
+          "recall": 0.745,
+          "f1-score": 0.7415579937304075,
+          "support": 200.0
+        }
+      }
+    },
+    "test_by_aspect": {}
+  }
+}
